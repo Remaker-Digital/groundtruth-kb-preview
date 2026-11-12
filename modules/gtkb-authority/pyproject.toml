@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling==1.29.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gtkb-authority"
+dynamic = ["version"]
+description = "Explicit PostgreSQL authority, domain transactions and control interfaces"
+requires-python = ">=3.11"
+license = "PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE", "LICENSE-DOCUMENTATION", "NOTICE"]
+readme = "README.md"
+dependencies = ["gtkb-protocol==0.1.0", "pydantic==2.13.3", "psycopg[binary]==3.3.4", "fastapi==0.139.0", "uvicorn==0.46.0", "tomlkit==0.13.3"]
+
+[tool.hatch.version]
+path = "src/gtkb_authority/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gtkb_authority"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/pyproject.toml", "/README.md", "/PROVENANCE.md", "/LICENSE", "/LICENSE-DOCUMENTATION", "/NOTICE"]

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling==1.29.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gtkb-protocol"
+dynamic = ["version"]
+description = "Storage-free GT-KB canonical JSON, protocol types and explicit HTTP client"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE", "LICENSE-DOCUMENTATION", "NOTICE"]
+authors = [{name = "Remaker Digital"}]
+dependencies = ["pydantic==2.13.3"]
+
+[tool.hatch.version]
+path = "src/gtkb_protocol/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gtkb_protocol"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/pyproject.toml", "/README.md", "/PROVENANCE.md", "/LICENSE", "/LICENSE-DOCUMENTATION", "/NOTICE"]

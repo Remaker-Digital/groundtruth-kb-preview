@@ -1,0 +1,36 @@
+GT-KB pre-release preview
+
+Copyright 2026 Remaker Digital, a DBA of VanDusen & Palmeter, LLC.
+
+Required Notice: Copyright 2026 Remaker Digital, a DBA of VanDusen & Palmeter, LLC.
+
+Original software created by us in this repository is licensed under the
+unmodified PolyForm Noncommercial License 1.0.0 in LICENSE.
+https://polyformproject.org/licenses/noncommercial/1.0.0
+
+Original documentation and other media created by us in this repository are
+licensed under the unmodified Creative Commons Attribution-NonCommercial 4.0
+International license in LICENSE-DOCUMENTATION. Attribute Remaker Digital,
+a DBA of VanDusen & Palmeter, LLC.
+https://creativecommons.org/licenses/by-nc/4.0/
+
+These scope and attribution notices apply only to original work we created.
+Each module folder under modules/ carries its own LICENSE, LICENSE-DOCUMENTATION,
+NOTICE and PROVENANCE.md.
+
+Third-party components
+
+This repository includes no third-party files. The modules declare the
+dependencies below. They are installed separately, are not included here, and
+keep their own licenses and notices. This notice does not relicense them.
+
+Runtime dependencies:
+  pydantic 2.13.3          MIT
+  psycopg[binary] 3.3.4    LGPL-3.0-only. The binary wheel bundles libpq and
+                           other libraries under their own licenses.
+  fastapi 0.139.0          MIT
+  uvicorn 0.46.0           BSD-3-Clause
+  tomlkit 0.13.3           MIT
+
+Build dependency:
+  hatchling 1.29.0         MIT
